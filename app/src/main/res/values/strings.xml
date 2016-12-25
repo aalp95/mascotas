@@ -2,4 +2,20 @@
     <string name="app_name">TareaCourseraMascotas</string>
     <string name="pnombre">nombre</string>
     <string name="pcant">0</string>
+    <string name="mContacto">Contactanos</string>
+    <string name="mAbout">Acerca de</string>
+    <string name="nombre_input">Nombre</string>
+    <string name="corre_input">Correo</string>
+    <string name="mensaje_input">Mensaje</string>
+    <string name="mensaje_enviado">Mensaje Enviado</string>
+    <string name="perfil_nombre">Luz</string>
+    <string name="Bio">Aplicacion Desarrollada por Angel Larreal\n Estudiante de Licenciatura en Computación
+e Ingeniero Electronico, actualmente dedicado
+al estudio de la programacion de aplicaciones
+web y moviles.</string>
+    <string name="identi">Angerapps</string>
+    <string name="pensamiento">Un Hombre sin Estudio, es un Ser Incompleto</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

@@ -1,4 +1,4 @@
-package angelapps.com.tareacourseramascotas;
+package angelapps.com.tareacourseramascotas.POGO;
 
 /**
  * Created by angel on 25/11/2016.
@@ -24,7 +24,7 @@ public class mascota {
         this.nombre = nombre;
     }
 
-    public String  getCant() {
+    public  String  getCant() {
         return cant;
     }
 
@@ -32,7 +32,7 @@ public class mascota {
         this.cant = cant;
     }
 
-    public int getFoto() {
+    public  int getFoto() {
         return foto;
     }
 

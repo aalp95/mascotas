@@ -2,14 +2,26 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context=".MainActivity"
+    tools:context=".POGO.MainActivity"
     >
     <item
         android:id="@+id/Favs"
-        android:icon="@drawable/estrella"
+        android:icon="@drawable/icestrella"
         android:title="Lista de Favoritos"
         app:showAsAction="ifRoom"
         android:orderInCategory="1"
+        />
+
+    <item
+        android:id="@+id/mCotacto"
+        android:title="@string/mContacto"
+        android:orderInCategory="100"
+        />
+
+    <item
+        android:id="@+id/mAbout"
+        android:title="@string/mAbout"
+        android:orderInCategory="101"
         />
 
 </menu>
