@@ -33,7 +33,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical"
         android:background="@color/cardview_dark_background"
-        android:layout_marginBottom="20dp"
         >
 
         <com.mikhaellopez.circularimageview.CircularImageView

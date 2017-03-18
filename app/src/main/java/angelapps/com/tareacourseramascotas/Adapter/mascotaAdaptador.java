@@ -8,11 +8,13 @@ package angelapps.com.tareacourseramascotas.Adapter;
     import android.widget.ImageButton;
     import android.widget.ImageView;
     import android.widget.TextView;
+    import android.widget.Toast;
 
     import java.lang.*;
 
     import java.util.ArrayList;
 
+    import angelapps.com.tareacourseramascotas.DB.ConstructorMascotas;
     import angelapps.com.tareacourseramascotas.POGO.mascota;
     import angelapps.com.tareacourseramascotas.R;
 
@@ -20,25 +22,10 @@ package angelapps.com.tareacourseramascotas.Adapter;
      * Created by angel on 25/11/2016.
      */
 
-    public class mascotaAdaptador extends RecyclerView.Adapter<mascotaAdaptador.ViewHolder> {
+    public class mascotaAdaptador extends RecyclerView.Adapter<mascotaAdaptador.mascotaViewHolder> {
 
-        private static final String TAG= "mascotaAdaptador";
         ArrayList<mascota> mascotas;
-        private int tipoCardView;
         Activity activity;
-        int contador;
-
-        public static final int HOME = 0;
-        public static final int PERFIL = 1;
-
-        int c =0;
-        boolean alfa=false;
-
-        public static class ViewHolder extends RecyclerView.ViewHolder{
-            public ViewHolder(View v){
-                super(v);
-            }
-        }
 
         public mascotaAdaptador(ArrayList<mascota> mascotas, Activity activity){
             this.mascotas = mascotas;
@@ -47,35 +34,39 @@ package angelapps.com.tareacourseramascotas.Adapter;
 
         //inflar el layout y lo pasara al viewholder para que el obtenga los views
         @Override
-        public ViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
+        public mascotaViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
             View v;
-
                 v=LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_mascota, viewGroup, false);
                 return new mascotaViewHolder(v);
 
         }
 
-
-
         //Asocia los elementos a cada view
         @Override
-        public void onBindViewHolder(ViewHolder viewHolder, int position) {
-                final mascotaViewHolder holder = (mascotaViewHolder) viewHolder;
+        public void onBindViewHolder(final mascotaViewHolder holder, int position) {
                 final mascota mascota = mascotas.get(position);
+                ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
                 holder.foto.setImageResource(mascota.getFoto());
                 holder.tvNombre.setText(mascota.getNombre());
-                holder.tvCuenta.setText(mascota.getCant());
+                holder.tvCuenta.setText(String.valueOf(constructorMascotas.obtenerLikeMascota(mascota)));
+
 
 
             holder.btnLike.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    int contador = (int) Integer.valueOf(mascota.getCant());
+                    Toast.makeText(activity, "Diste Like a " + mascota.getNombre(), Toast.LENGTH_SHORT).show();
+
+                    ConstructorMascotas constructorMascotas = new ConstructorMascotas(activity);
+                    constructorMascotas.darLikeMascota(mascota);
+                    holder.tvCuenta.setText(String.valueOf(constructorMascotas.obtenerLikeMascota(mascota)));
+
+                    /* int contador = (int) Integer.valueOf(mascota.getCant());
                     if (contador!=9999) {
                         contador++;
                         mascota.setCant(Integer.toString(contador));
                         holder.tvCuenta.setText("" + contador);
-                    }
+                    }*/
                 }
             });
 
@@ -88,8 +79,7 @@ package angelapps.com.tareacourseramascotas.Adapter;
     }
 
 
-
-    public static class mascotaViewHolder extends  ViewHolder{
+    public static class mascotaViewHolder extends  RecyclerView.ViewHolder{
 
         private ImageView foto;
         private TextView tvNombre;

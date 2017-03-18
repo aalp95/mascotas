@@ -53,16 +53,16 @@ public class PerfilFragment extends Fragment {
     public void inicializarListaMascotasP() {
         mascotas2 = new ArrayList<mascota>();
 
-        mascotas2.add(new mascota(R.drawable.gato1, "Michael", "5"));
-        mascotas2.add(new mascota(R.drawable.gato_2, "Luz", "6"));
-        mascotas2.add(new mascota(R.drawable.luz1, "Luz", "7"));
-        mascotas2.add(new mascota(R.drawable.luz2, "Luz", "8"));
-        mascotas2.add(new mascota(R.drawable.luz3, "Luz", "10"));
-        mascotas2.add(new mascota(R.drawable.luz4, "Luz", "11"));
-        mascotas2.add(new mascota(R.drawable.luz5, "Luz", "7"));
-        mascotas2.add(new mascota(R.drawable.luz6, "Luz","5"));
-        mascotas2.add(new mascota(R.drawable.luz7, "Luz", "8"));
-        mascotas2.add(new mascota(R.drawable.luz8, "Luz", "22"));
+        mascotas2.add(new mascota(R.drawable.gato1, "Michael", 5));
+        mascotas2.add(new mascota(R.drawable.gato_2, "Luz", 6));
+        mascotas2.add(new mascota(R.drawable.luz1, "Luz", 7));
+        mascotas2.add(new mascota(R.drawable.luz2, "Luz", 8));
+        mascotas2.add(new mascota(R.drawable.luz3, "Luz", 10));
+        mascotas2.add(new mascota(R.drawable.luz4, "Luz", 11));
+        mascotas2.add(new mascota(R.drawable.luz5, "Luz", 7));
+        mascotas2.add(new mascota(R.drawable.luz6, "Luz", 5));
+        mascotas2.add(new mascota(R.drawable.luz7, "Luz", 8));
+        mascotas2.add(new mascota(R.drawable.luz8, "Luz", 22));
     }
 
 }

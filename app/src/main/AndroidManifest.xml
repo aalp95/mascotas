@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".POGO.Favs"
+            android:name=".pantallas.Favs"
             android:label="Favoritos"
             android:parentActivityName=".POGO.MainActivity">
 

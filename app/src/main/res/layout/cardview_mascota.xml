@@ -38,6 +38,16 @@
                 />
 
             <TextView
+                android:id="@+id/tvnum"
+                android:textSize="20dp"
+                android:textAlignment="center"
+                android:layout_weight="1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pcant"
+                />
+
+            <TextView
                 android:id="@+id/tvNombre"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -46,16 +56,6 @@
                 android:textSize="20dp"
                 android:textAlignment="textEnd"
                 android:textStyle="bold"
-                />
-
-            <TextView
-                android:id="@+id/tvnum"
-                android:textSize="20dp"
-                android:textAlignment="center"
-                android:layout_weight="1"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/pcant"
                 />
 
             <ImageView
